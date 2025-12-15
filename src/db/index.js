@@ -3,7 +3,6 @@ import { DB_NAME } from "../constant.js";
 import express from "express";
 
 const app = express();
-
 const connectDB = () => {
   try {
     mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`);
@@ -16,6 +15,4 @@ const connectDB = () => {
     throw error;
   }
 };
-
-
 export default connectDB;
