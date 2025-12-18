@@ -3,19 +3,14 @@ import express from "express";
 import { DB_NAME } from "./constant.js";
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import app from "./db/index.js"
 dotenv.config();
-
+ 
 connectDB()
-  .then(() => {
-    (5000,
-      () => {
-        console.log("server is running on 5000");
-      });
-  })
-  .catch((error) => {
-    console.error(error)
-  });
+
+
+  
+
 // const app = express()
 
 // const connectDB = async ()=>{
